@@ -12,8 +12,9 @@ public class ExecutarProduto {
 		batom.marca = "Avon";
 		batom.valor = 50.0f;
 		
-		System.out.println("O produto é: " + batom.descricao);
-		System.out.println("O valor é: " + batom.valor);
+		//System.out.println("O produto é: " + batom.descricao);
+		//System.out.println("O valor é: " + batom.valor);
+		System.out.println(batom.detalhe());
 	}
 
 }
