@@ -2,8 +2,8 @@ package beans;
 
 public class Produto {
 	private String descricao;
-	public String marca;
-	public float valor;
+	private String marca;
+	private float valor;
 	
 	// getters e setters
 	
@@ -17,6 +17,24 @@ public class Produto {
 		return descricao;
 	}
 	
+	
+	
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
 	public String detalhe() {
 		return "Produto:" + descricao + " - Marca:" + marca; 
 	}
