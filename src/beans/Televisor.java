@@ -7,37 +7,27 @@ public class Televisor {
 	public int getCanal() {
 		return canal;
 	}
-	public void setCanal(int canal) {
-		if (canal < 1 && canal > 10) {
-			System.out.println("O Canal não existe");
-		} else {
+	private void setCanal(int canal) {
 		this.canal = canal;
-		}
 	}
 	public int getVolume() {
 		return volume;
 	}
-	public void setVolume(int volume) {
-		if (volume > 10) {
-			System.out.println("Volume já está no maximo");
-		} else if (volume < 0) {
-			System.out.println("Não é possivel diminuir mais o volume!");
-		} else {
+	private void setVolume(int volume) {
 		this.volume = volume;
-		}
+		
 	}
 	public boolean isLigado() {
 		return ligado;
 	}
 	public void setLigado(boolean ligado) {
-		if (ligado) {
-			System.out.println("A televisão já está ligada");
-		}
 		this.ligado = ligado;
 	}
 	
 	public void aumentarVolume() {
-		volume++;
+		if (volume < 10) {
+			volume++;
+		}
 	}
 	
 	public void reduzirVolume() {
@@ -45,11 +35,19 @@ public class Televisor {
 	}
 	
 	public void subirCanal() {
-		canal++;
+		if (canal > 16) {
+			System.out.println("O canal não existe!");
+		} else {
+			canal++;
+		}
 	}
 	
 	public void descerCanal() {
-		canal++;
+		if (canal < 1) {
+			System.out.println("O Canal não existe!");
+		} else {
+			canal--;
+		}
 	}
 	
 	public void ligarTelevisor() {

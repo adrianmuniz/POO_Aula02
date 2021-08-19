@@ -9,7 +9,18 @@ public class ExecutarTelevisor {
 		
 		System.out.println(tv.mostrarStatus());
 
-		
+		tv.setLigado(true);
+		tv.aumentarVolume();
+		tv.aumentarVolume();
+		tv.aumentarVolume();
+		tv.aumentarVolume();
+		tv.subirCanal();
+		tv.subirCanal();
+		System.out.println(tv.mostrarStatus());
+		tv.subirCanal();
+		tv.subirCanal();
+		tv.aumentarVolume();
+		tv.aumentarVolume();
 	}
 
 }
