@@ -32,7 +32,11 @@ public class Produto {
 	}
 
 	public void setValor(float valor) {
-		this.valor = valor;
+		if (valor < 0) {
+			this.valor = 0;
+		} else {
+			this.valor = valor;
+		}
 	}
 
 	public String detalhe() {
