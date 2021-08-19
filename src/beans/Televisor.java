@@ -25,17 +25,23 @@ public class Televisor {
 	}
 	
 	public void aumentarVolume() {
-		if (volume < 10) {
+		if (volume > 2) {
+			System.out.println("Não é possivel aumentar mais o volume!");
+		} else {
 			volume++;
 		}
 	}
 	
 	public void reduzirVolume() {
-		volume--;
+		if (volume < 1) {
+			System.out.println("Não é possivel diminuir mais o volume!");
+		} else {
+			volume--;
+		}	
 	}
 	
 	public void subirCanal() {
-		if (canal > 16) {
+		if (canal > 2) {
 			System.out.println("O canal não existe!");
 		} else {
 			canal++;
